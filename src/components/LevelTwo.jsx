@@ -173,8 +173,9 @@ console.log("showStartMessage",showStartMessage);
       const result = await response.json();
       if (response.ok) {
         console.log("Success:", result);
-        localStorage.clear();
+        
         navigate("/completed");
+        localStorage.clear();
       } else {
         console.error("Error:", result.message);
       }
