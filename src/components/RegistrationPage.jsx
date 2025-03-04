@@ -143,9 +143,9 @@ const RegistrationPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center justify-center text-white p-6 bg-cover bg-center">
+    <div className="flex flex-col items-center justify-center text-white p-5 bg-cover bg-center">
       <motion.h2
-        className="text-3xl md:text-6xl mb-6 font-extrabold text-[#00D9FF] neon-text  text-center"
+        className="text-3xl md:text-6xl mb-5 font-extrabold text-[#00D9FF] neon-text  text-center"
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeIn" }}
@@ -182,7 +182,7 @@ const RegistrationPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1.0 + index * 0.5 }}
           >
-            <div className="flex gap-20 mb-6">
+            <div className="flex gap-20 mb-5">
               {/* Name Input */}
               <input
                 ref={(el) => (inputRefs.current[`name-${index}`] = el)}

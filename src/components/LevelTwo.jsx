@@ -228,7 +228,7 @@ console.log("showStartMessage",showStartMessage);
 
 
 
-<div className="flex items-center justify-center mt-3 space-y-3 gap-2">
+<div className="flex items-center justify-center mt-2 space-y-3 gap-2">
   <h2 className="text-3xl font-extrabold text-white tracking-wide">
     Finish Time: 
   </h2>
