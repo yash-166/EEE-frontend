@@ -191,10 +191,10 @@ console.log("showStartMessage",showStartMessage);
 
 
   const cards = [
-    { id: 0, image: "/card1.jpeg", position: { top: "7%", left: "10%" }, animation: "animate-slideLeft" },
-    { id: 1, image: "/card2.jpeg", position: { top: "7%", right: "10%" }, animation: "animate-slideRight" },
-    { id: 2, image: "/card3.jpeg", position: { bottom: "12%", left: "10%" }, animation: "animate-slideLeft" },
-    { id: 3, image: "/card4.jpeg", position: { bottom: "12%", right: "10%" }, animation: "animate-slideRight" },
+    { id: 0, image: "/card1.jpeg", position: { top: "6%", left: "10%" }, animation: "animate-slideLeft" },
+    { id: 1, image: "/card2.jpeg", position: { top: "6%", right: "10%" }, animation: "animate-slideRight" },
+    { id: 2, image: "/card3.jpeg", position: { bottom: "13%", left: "10%" }, animation: "animate-slideLeft" },
+    { id: 3, image: "/card4.jpeg", position: { bottom: "13%", right: "10%" }, animation: "animate-slideRight" },
   ];
   const handleRotationEnd = () => {
     setIsFlipped(true); // Set `isFlipped` to true only after 180-degree rotation
@@ -261,7 +261,7 @@ console.log("showStartMessage",showStartMessage);
         ) : (
           // Animate selected card moving to center
           <div
-            className={`absolute w-48 h-57 flex items-center justify-center rounded-lg cursor-pointer transition-all duration-[2.5s] ease-in-out ${animateCard ? "top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] scale-100 opacity-100" : "opacity-0"
+            className={`absolute w-48 h-57 flex items-center justify-center rounded-lg cursor-pointer transition-all duration-[2.5s] ease-in-out ${animateCard ? "top-[43%] left-[50%] translate-x-[-50%] translate-y-[-50%] scale-100 opacity-100" : "opacity-0"
               }`}
           // onClick={() => setStartRotation(true)}
           >
@@ -287,7 +287,7 @@ console.log("showStartMessage",showStartMessage);
       <button
         onClick={handleFinish}
         disabled={!disabledButton}
-        className="cursor-pointer mb-5 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
+        className="cursor-pointer mb-7 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
       >
         Finish
       </button>

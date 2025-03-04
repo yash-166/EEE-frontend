@@ -46,7 +46,7 @@ const InstructionsPage = () => {
         Instructions
       </motion.h2>
 
-      <div className="p-4 px-9 rounded-lg shadow-lg bg-opacity-30 backdrop-blur-sm max-w-[900px] custom-scrollbar w-full max-h-[500px] overflow-y-auto flex flex-col">
+      <div className="p-4 px-9 rounded-lg shadow-lg bg-opacity-30 backdrop-blur-sm max-w-[900px] custom-scrollbar w-full max-h-[515px] overflow-y-auto flex flex-col">
         {instructions.map((instruction, index) => (
           <motion.p
             key={index}
