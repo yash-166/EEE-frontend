@@ -218,7 +218,7 @@ const MatchingGame = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className={`absolute bottom-10 px-4 mt-3 py-2 text-white font-bold rounded-md transition ${
+        className={`absolute bottom-6 px-4 mt-3 py-2 text-white font-bold rounded-md transition ${
           matchedPairs.length !== logicGates.length
             ? "bg-gray-400 cursor-not-allowed"
             : "bg-green-500 hover:bg-green-600 cursor-pointer"
