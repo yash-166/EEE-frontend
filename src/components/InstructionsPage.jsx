@@ -36,7 +36,7 @@ const InstructionsPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-darkblue text-white p-6 relative overflow-hidden">
+    <div className="flex flex-col items-center bg-darkblue text-white p-6 relative overflow-hidden">
       <motion.h2
         className="text-4xl font-bold mb-6 text-cyan-400"
         initial={{ y: -50, opacity: 0 }}
@@ -46,7 +46,7 @@ const InstructionsPage = () => {
         Instructions
       </motion.h2>
 
-      <div className="p-6 px-9 rounded-lg shadow-lg bg-opacity-30 backdrop-blur-sm max-w-[1000px] custom-scrollbar w-full max-h-[550px] overflow-y-auto flex flex-col">
+      <div className="p-4 px-9 rounded-lg shadow-lg bg-opacity-30 backdrop-blur-sm max-w-[900px] custom-scrollbar w-full max-h-[500px] overflow-y-auto flex flex-col">
         {instructions.map((instruction, index) => (
           <motion.p
             key={index}

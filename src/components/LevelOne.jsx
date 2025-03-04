@@ -124,7 +124,7 @@ const MatchingGame = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-screen overflow-hidden bg-cover bg-center relative"
+    <div className="flex flex-col justify-center items-center  w-screen overflow-hidden bg-cover bg-center relative"
       style={{ backgroundImage: "url('/images/background.jpg')" }}>
       
       {/* Heading */}

@@ -143,7 +143,7 @@ const RegistrationPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white p-6 bg-cover bg-center">
+    <div className="flex flex-col items-center justify-center text-white p-6 bg-cover bg-center">
       <motion.h2
         className="text-3xl md:text-6xl mb-6 font-extrabold text-[#00D9FF] neon-text  text-center"
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
