@@ -33,6 +33,7 @@ console.log("showStartMessage",showStartMessage);
       return;
     }
 
+
     setTimeout(() => setShowContent(true), 300); // Delays showing content for smooth transition
 
     fetch(`${BACK_URL}/team/get-revealed-card`)
@@ -191,10 +192,10 @@ console.log("showStartMessage",showStartMessage);
 
 
   const cards = [
-    { id: 0, image: "/card1.jpeg", position: { top: "6%", left: "10%" }, animation: "animate-slideLeft" },
-    { id: 1, image: "/card2.jpeg", position: { top: "6%", right: "10%" }, animation: "animate-slideRight" },
-    { id: 2, image: "/card3.jpeg", position: { bottom: "13%", left: "10%" }, animation: "animate-slideLeft" },
-    { id: 3, image: "/card4.jpeg", position: { bottom: "13%", right: "10%" }, animation: "animate-slideRight" },
+    { id: 0, image: "/card1.jpeg", position: { top: "4%", left: "10%" }, animation: "animate-slideLeft" },
+    { id: 1, image: "/card2.jpeg", position: { top: "4%", right: "10%" }, animation: "animate-slideRight" },
+    { id: 2, image: "/card3.jpeg", position: { bottom: "15%", left: "10%" }, animation: "animate-slideLeft" },
+    { id: 3, image: "/card4.jpeg", position: { bottom: "15%", right: "10%" }, animation: "animate-slideRight" },
   ];
   const handleRotationEnd = () => {
     setIsFlipped(true); // Set `isFlipped` to true only after 180-degree rotation
@@ -206,7 +207,7 @@ console.log("showStartMessage",showStartMessage);
     <>
     {isVisible ? 
 
-    (<div className="flex flex-col items-center justify-center  text-white">
+    (<div className="flex flex-col items-center  text-white">
       {/* Heading with Drop-In Animation */}
       <h2
         className={`text-3xl font-bold mb-4 mt-4 transition-transform duration-1000 ease-out ${showContent ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
@@ -233,7 +234,7 @@ console.log("showStartMessage",showStartMessage);
     Finish Time: 
   </h2>
   <p className="text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 
-                px-6 py-2 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+                px-4 py-1 rounded-md shadow-lg transform transition duration-300 hover:scale-105">
     {finishTime}
   </p>
 </div>
@@ -263,7 +264,7 @@ console.log("showStartMessage",showStartMessage);
           <div
             className={`absolute w-48 h-57 flex items-center justify-center rounded-lg cursor-pointer transition-all duration-[2.5s] ease-in-out ${animateCard ? "top-[43%] left-[50%] translate-x-[-50%] translate-y-[-50%] scale-100 opacity-100" : "opacity-0"
               }`}
-          // onClick={() => setStartRotation(true)}
+          
           >
             <div
               className={`relative w-full h-full transition-transform duration-1800 ease-in-out ${startRotation ? "rotate-y-360" : ""
@@ -287,7 +288,10 @@ console.log("showStartMessage",showStartMessage);
       <button
         onClick={handleFinish}
         disabled={!disabledButton}
-        className="cursor-pointer mb-7 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
+        // className="cursor-pointer mb-5 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
+        className={`mb-5 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 ${
+          disabledButton ? "cursor-pointer hover:scale-105" : "cursor-not-allowed opacity-80"
+        }`}
       >
         Finish
       </button>

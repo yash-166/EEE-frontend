@@ -61,6 +61,8 @@ const RegistrationPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (Loading) return; 
   
     let firstErrorField = null;
     const updatedTeam = [...team];
@@ -143,9 +145,9 @@ const RegistrationPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center justify-center text-white p-5 bg-cover bg-center">
+    <div className="flex flex-col  items-center justify-center text-white p-5 bg-cover bg-center">
       <motion.h2
-        className="text-3xl md:text-6xl mb-5 font-extrabold text-[#00D9FF] neon-text  text-center"
+        className="text-3xl md:text-6xl mb-5 mt-2 font-extrabold text-[#00D9FF] neon-text  text-center"
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeIn" }}
@@ -223,12 +225,16 @@ const RegistrationPage = () => {
 
         <motion.button
           type="submit"
-          className="py-2 w-fit mt-[40px] px-5 bg-blue-1000 hover:bg-blue-900 text-white font-bold mx-auto block border border-gray-400 rounded focus:ring-2 focus:ring-blue-1000"
+          // className="py-2 w-fit mt-[40px] px-5 bg-blue-1000 hover:bg-blue-900 text-white font-bold mx-auto block border border-gray-400 rounded focus:ring-2 focus:ring-blue-1000"
+          className={`py-2 w-fit mt-[40px] px-5 bg-blue-1000 hover:bg-blue-900 text-white font-bold mx-auto block border border-gray-400 rounded focus:ring-2 focus:ring-blue-1000 transition-opacity ${
+            Loading ? "opacity-50 cursor-not-allowed" : "opacity-100"
+          }`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1.2 }}
+          disabled={Loading}
         >
-          Register & Proceed
+          {Loading ? "Proceeding..." : "Register & Proceed"}
         </motion.button>
       </motion.form>
     </div>

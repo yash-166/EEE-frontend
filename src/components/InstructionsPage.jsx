@@ -36,7 +36,7 @@ const InstructionsPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center bg-darkblue text-white p-6 relative overflow-hidden">
+    <div className="flex flex-col items-center  bg-darkblue text-white p-6 relative overflow-hidden">
       <motion.h2
         className="text-4xl font-bold mb-6 text-cyan-400"
         initial={{ y: -50, opacity: 0 }}

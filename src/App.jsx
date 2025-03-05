@@ -9,9 +9,9 @@ function App() {
   return (
   
 
-  <div className="relative h-screen w-full bg-cover bg-center " style={{ backgroundImage: "url('/pixelcut-export.png')" }}>
+  <div className="relative min-h-screen w-full bg-cover bg-center " style={{ backgroundImage: "url('/pixelcut-export.png')" }}>
   {/* Overlay with a small blur effect */}
-  <div className="absolute inset-0 backdrop-blur-xs"></div>
+  <div className="absolute inset-0 backdrop-blur-sm"></div>
 
   {/* Your actual content */}
   <div className="relative z-10">

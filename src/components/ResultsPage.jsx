@@ -76,10 +76,10 @@ const ResultsPage = () => {
     }));
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center text-white p-6">
+        <div className="min-h-screen flex flex-col items-center text-white p-5">
             {/* Animated Header with Rotating Gears */}
             <motion.div 
-                className="flex items-center justify-center gap-4 mb-6"
+                className="flex items-center justify-center gap-5 mb-6"
                 {...fadeInFromAir(0.2)}
             >
                 <motion.span 
@@ -140,7 +140,7 @@ const ResultsPage = () => {
             {inCorrectPairs && inCorrectPairs.length > 0 && (
               <>
                 <motion.h2 
-                    className="text-3xl font-extrabold text-yellow-300 mt-8 flex items-center gap-3"
+                    className="text-3xl font-extrabold text-yellow-300 mt-5 flex items-center gap-3"
                     {...fadeInFromAir(0.8)}
                 >
                     ⚠️ <span className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">Circuit Error Detected!</span> ⚠️
@@ -177,7 +177,7 @@ const ResultsPage = () => {
             <motion.div className="flex gap-98 justify-center mt-8" {...fadeInFromAir(1.2)}>
                 {!isPerfectScore && (
                     <motion.button 
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
+                        className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => navigate("/level-one")}
@@ -186,7 +186,7 @@ const ResultsPage = () => {
                     </motion.button>
                 )}
                 <motion.button 
-                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
+                    className="cursor-pointer bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={handleSubmitFirstLevel}

@@ -122,26 +122,53 @@ const MatchingGame = () => {
     }
     
   };
-
+  // style={{ backgroundImage: "url('/images/background.jpg')" }}
   return (
-    <div className="flex flex-col justify-center items-center  w-screen overflow-hidden bg-cover bg-center relative"
-      style={{ backgroundImage: "url('/images/background.jpg')" }}>
+    <div className="flex flex-col items-center min-h-screen w-full overflow-hidden bg-cover bg-center relative"
+      >
       
       {/* Heading */}
       <motion.h1
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.4, ease: "easeOut" }}
-        className="text-4xl mt-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-4"
+        className="text-4xl mt-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-5"
       >
         LEVEL-1 MATCHING
       </motion.h1>
+
+      <motion.div 
+        initial={{ y: -50, opacity: 0 }} 
+        animate={{ y: 0, opacity: 1 }} 
+        transition={{ duration: 1.4, ease: "easeOut", delay: 0.8 }}
+        className="flex bg-opacity-80  w-full justify-around items-center"
+      >
+         <motion.h4
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+        className="text-[21px] font-bold text-blue-300"
+      >
+       📌 click 2 times on middle of the card for selection
+      </motion.h4>
+
+      <motion.h4
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+        className="text-[21px] font-bold text-blue-300"
+      >
+       📌 Each colour denotes the each pair of selection 
+      </motion.h4>
+        
+
+      </motion.div> 
       
       <motion.div 
         initial={{ y: -200, opacity: 0 }} 
         animate={{ y: 0, opacity: 1 }} 
         transition={{ duration: 1.4, ease: "easeOut", delay: 0.8 }}
-        className="flex gap-20 bg-opacity-80 p-8 rounded-lg shadow-xl max-w-4xl w-full justify-between items-center"
+        className="flex gap-20 bg-opacity-80 p-8 rounded-lg  max-w-4xl w-full justify-between items-center"
       >
         
         {/* Left Side - Logic Gates */}
