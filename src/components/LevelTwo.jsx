@@ -148,6 +148,9 @@ console.log("showStartMessage",showStartMessage);
 
 
   const handleFinish = async () => {
+    if (!disabledButton) return; // Prevent multiple clicks
+
+    setDisabledButton(false); 
     const now = new Date();
     const formattedFinishTime = now.toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -229,7 +232,7 @@ console.log("showStartMessage",showStartMessage);
 
 
 
-<div className="flex items-center justify-center mt-2 space-y-3 gap-2">
+<div className="flex items-center justify-center mt-2 space-y-1 gap-2">
   <h2 className="text-3xl font-extrabold text-white tracking-wide">
     Finish Time: 
   </h2>
@@ -242,7 +245,7 @@ console.log("showStartMessage",showStartMessage);
       
       
 
-      <div className="relative w-[800px] h-[500px] flex items-center justify-center  rounded-lg ">
+      <div className="relative w-[800px] h-[495px] flex items-center justify-center  rounded-lg ">
         {selectedCard === null ? (
           // Show all four cards with animations
           cards.map((card) => (
@@ -262,7 +265,7 @@ console.log("showStartMessage",showStartMessage);
         ) : (
           // Animate selected card moving to center
           <div
-            className={`absolute w-48 h-57 flex items-center justify-center rounded-lg cursor-pointer transition-all duration-[2.5s] ease-in-out ${animateCard ? "top-[43%] left-[50%] translate-x-[-50%] translate-y-[-50%] scale-100 opacity-100" : "opacity-0"
+            className={`absolute  w-48 h-57 flex items-center justify-center rounded-lg cursor-pointer transition-all duration-[2.5s] ease-in-out ${animateCard ? "top-[43%] left-[50%] translate-x-[-50%] translate-y-[-50%] scale-100 opacity-100" : "opacity-0"
               }`}
           
           >
@@ -288,13 +291,16 @@ console.log("showStartMessage",showStartMessage);
       <button
         onClick={handleFinish}
         disabled={!disabledButton}
-        // className="cursor-pointer mb-5 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
-        className={`mb-5 -mt-9 py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 ${
+        className="cursor-pointer mb-5  py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold transition-transform duration-300 hover:scale-105"
+        className={`mb-5  py-3 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold ${
           disabledButton ? "cursor-pointer hover:scale-105" : "cursor-not-allowed opacity-80"
         }`}
       >
-        Finish
+        Completed
       </button>
+
+
+
 
       {/* Inline CSS for animations */}
       <style>

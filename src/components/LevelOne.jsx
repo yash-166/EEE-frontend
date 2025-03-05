@@ -45,8 +45,10 @@ const MatchingGame = () => {
     "Output is high only when both inputs are not same",
     "Output is high only when both inputs are high",
     "Output is complement to the input",
-    "Output is high except when both inputs are high",
     "Output is high if any one of the input is high",
+   
+    "Output is high except when both inputs are high",
+    
   ];
 
 
