@@ -233,7 +233,7 @@ const FileUploadPage = () => {
 
     // Setting the file name in Cloudinary
     formData.append("public_id", originalFileName); 
-    formData.append("resource_type", "raw");
+    formData.append("resource_type", "auto");
     
     try {
       const response = await fetch(CLOUDINARY_UPLOAD_URL, {
@@ -275,19 +275,21 @@ const FileUploadPage = () => {
 
     <div className="flex flex-col items-center justify-center min-h-screen  text-white">
      {!submitted && <h2
-        className="text-3xl font-bold mb-[60px]"
+        className="text-3xl font-bold mb-[50px]"
       >
        🚀  Please upload Your File
       </h2>} 
-    
+
+      {!submitted && <span className="text-lg mb-5 font-semibold">
+            File is:  {file ? file.name : "No file chosen"}
+          </span>}
+      
 
       {!submitted ? (
         <div className="flex  justify-around items-center gap-5  py-8 px-4 w-[350px] h-[150px] border border-gray-700 rounded-lg">
           <div className="flex flex-col gap-2">
           <input type="file" onChange={handleFileUpload} className="hidden" id="fileInput" />
-          <span className="text-lg font-semibold">
-            {file ? file.name : "No file chosen"}
-          </span>
+          
           <label
             htmlFor="fileInput"
             className="py-2 px-5 bg-gray-700 hover:bg-gray-500 rounded text-white font-bold cursor-pointer"
@@ -300,7 +302,7 @@ const FileUploadPage = () => {
           <button
             onClick={handleSubmit}
             disabled={!fileUrl}
-            className={`py-[8px] mt-8 px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold ${
+            className={`py-[8px]  px-8 bg-blue-900 hover:bg-blue-700 rounded text-white font-bold ${
               fileUrl ? "cursor-pointer hover:scale-105" : "cursor-not-allowed opacity-80"
             }`}
           >
