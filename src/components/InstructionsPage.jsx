@@ -3,18 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const instructions = [
-  "Read all the instructions carefully before proceeding.",
-  "Ensure you have a stable internet connection.",
-  "Each level has a time limit, so manage your time wisely.",
-  "Your progress will be saved automatically.",
-  "Do not refresh the page while attempting the level.",
-  "You must complete the current level before proceeding to the next one.",
-  "Violation of rules may result in disqualification.",
-  "dfsfsdfsdfs sdfsd ",
-  "sdsdfsfsf",
-  "sdfsdfsdfsd",
-  "sdfsdfsdfsd",
-  "somemefffef fsdsd"
+  "In first level You have to match the logic gates and its statement.",
+  "Please tap two times in the middle of the card respectively to select the cards.",
+  "After submitting the results, the score will be displayed.",
+  "Players will upgraded to the 2nd level without considering the score of 1st level.",
+  "In level 2 select a card in the four flash cards.",
+  "You have only one chance to select a card .So select the card correctly.",
+  "Instructor reveal the card which is choosen by most of the players.",
+  "The flash card will display on the screens with the statement (logic circuit) which is revealed by the instructor.",
+  "The timer will be started by the instructor.",
+  "After completing your circuit in multisim ,save it and   stop the timer by yourself by clicking the submit button.",
+  "Then upload the file which is saved by you in the website.",
+  "Then ROUND 1 of the brightest minds is successfully completed."
+
 ];
 
 const InstructionsPage = () => {
@@ -44,6 +45,15 @@ const InstructionsPage = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         Instructions
+      </motion.h2>
+
+      <motion.h2
+        className="text-[22px] font-bold mb-1 text-red-600"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Please read the instructions carefully
       </motion.h2>
 
       <div className="p-4 px-9 rounded-lg shadow-lg bg-opacity-30 backdrop-blur-sm max-w-[900px] custom-scrollbar w-full max-h-[515px] overflow-y-auto flex flex-col">
