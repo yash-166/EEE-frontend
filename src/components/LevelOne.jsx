@@ -151,7 +151,7 @@ const MatchingGame = () => {
         transition={{ duration: 1.4, ease: "easeOut" }}
         className="text-[21px] font-bold text-blue-300"
       >
-       📌 click 2 times on middle of the card for selection
+       📌Please tap 2 times on middle of the card for selection
       </motion.h4>
 
       <motion.h4

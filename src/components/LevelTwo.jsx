@@ -317,7 +317,7 @@ const formatTime = (seconds) => {
             >
               {isFlipped ? (
                 // <img src='/AND Gate.jpg' alt="Selected Card" className="w-full h-full rounded-xl" />
-                <div className="rounded-md  h-full w-full text-[18px] bg-gray-700 white font-bold items-center flex text-center">
+                <div className="rounded-md px-2 h-full w-full text-[18px] bg-gray-700 white font-bold items-center flex text-center">
                   <p>{revealedContent}</p>
                 </div>
               ) : (

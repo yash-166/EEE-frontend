@@ -24,8 +24,13 @@ const InstructionsPage = () => {
 
   useEffect(() => {
     const isRegistered = localStorage.getItem("teamId");
+    const level2Active = localStorage.getItem("isRunning")
     if (!isRegistered) {
       navigate("/");
+    }
+
+    if(level2Active){
+      navigate("/level-two")
     }
   }, [navigate]);
 
